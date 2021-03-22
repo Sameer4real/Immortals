@@ -1,0 +1,43 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/nav.ejs') %>
+            <nav>
+                <div class="site-title">
+                    <h1>The Rhymes Fortress</h1>
+                    <p>Rhymes and shit..... Not related poems</p>
+                </div>
+                <ul>
+                    <li><a href="/blogs/create" class="newblog">New Blog</a></li>
+                </ul>
+
+            </nav>
+
+
+
+            <div class="blogs content">
+                <h2>All Blogs</h2>
+
+                <% if (blogs.length> 0) { %>
+                    <% blogs.forEach(blog=> { %>
+                        <a class="single" href="/blogs/<%= blog._id %>">
+
+                            <h3 class="title">
+                                <%= blog.title %>
+                            </h3>
+                            <p class="snippet">
+                                <%= blog.snippet %>
+                            </p><br>
+                        </a>
+                        <% }) %>
+                            <% } else {%>
+                                <h3>There are no blogs to display :(</h3>
+                                <% } %>
+
+            </div>
+            <%- include('../partials/footer.ejs')%>
+    </body>
+
+</html>

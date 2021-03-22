@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<%- include('./partials/head.ejs') %>
+
+    <body>
+
+        <%- include('./partials/nav.ejs') %>
+
+            <div class="card">
+                <div class="profile-sidebar">
+
+                    <picture>
+                        <source
+                            srcset="/images/lagorra.jpg"
+                            profile-image" media="(max-width: 600px)">
+                        <source
+                            srcset="/images/sameer.jpg"
+                            class="profile-image">
+                        <img src="/images/sameer.jpg"
+                            class="profile-image" alt="sameer">
+                    </picture>
+
+                    <ul class="social-list">
+                        <li class="social-item"><a aria-label="dribbble" class="social-link"
+                                href="https://www.instagram.com/sameer04real/" target="_blank"><i
+                                    class="fab fa-instagram-square"></i></a></li>
+                        <li class="social-item"><a aria-label="facebook" class="social-link"
+                                href="https://www.facebook.com/sameer4real" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a></li>
+                        <li class="social-item"><a aria-label="twitter" class="social-link"
+                                href="https://twitter.com/Sameer04Real" target="_blank"><i
+                                    class="fab fa-twitter-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="profile-main">
+                    <h2 class="profile-name">Sameer Twal</h2>
+                    <p class="profile-position">Software Engineer</p>
+                    <p class="profile-body">
+                        What it do babeee...<br>
+                        Software Engineer with a degree of computer science from Al-Balqa Applied Univesity in 2021
+                        worked and reestablished myself after graduation as one of the best Software Engineers in Jordan
+                        started my journey with Xina AI company based in Amman-Jordan as a trainee
+                        they helped me build my confidence when it comes to my skill set and my knowledge,<br>
+                        and the journey is just getting started...
+
+                    </p>
+                </div>
+            </div>
+
+            <nav>
+                <div class="site-title">
+                    <h1>Role Models</h1>
+                    <p style="text-transform: none;">People that I idealize and respect and look up for in life</p>
+                    <p style="text-transform: none;">People that gives the motivation and support i need to reach my
+                        full
+                        potential</p>
+                </div>
+            </nav>
+
+            <div class="card" style="margin-right: 20px;">
+                <div class="profile-sidebar">
+                    <picture>
+                        <source
+                            srcset="/images/jcole.jpg"
+                            profile-image" media="(max-width: 600px)">
+                        <source
+                            srcset="/images/cole.jpg"
+                            class="profile-image">
+                        <img src="/images/cole.jpg"
+                            class="profile-image" alt="cole">
+                    </picture>
+
+                </div>
+                <div class="profile-main">
+                    <h2 class="profile-name">J COLE</h2>
+                    <P class="profile-position">Who Is J COLE?</P>
+                    <p class="profile-body" style="margin-bottom: 10px;">
+                        <br>
+                        Jermaine Lamarr Cole is an American rapper, singer, songwriter,
+                        producer,
+                        and record executive. Born on a military base in Germany and raised in Fayetteville,
+                        North Carolina, Cole initially gained recognition as a rapper following the release of his
+                        debut
+                        mixtape,
+                        The Come Up, in early 2007.<br>
+                        And this is a snippet from one of his best singles so far called the 'The Climb Back'...
+                    </p>
+                    <audio controls controlsList="nodownload" class="profile-audio">
+                        <source
+                            src="/audios/theClimbBack.mp3"
+                            type="audio/ogg">
+                        <source
+                            src="/audios/theClimbBack.mp3"
+                            type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+            <div class="card" style="margin-right: 20px;">
+                <div class="profile-sidebar">
+                    <picture>
+                        <source
+                            srcset="/images/biggie.jpg"
+                            profile-image" media="(max-width: 600px)">
+                        <source
+                            srcset="/images/big.jpg"
+                            class="profile-image">
+                        <img src="/images/big.jpg"
+                            class="profile-image" alt="biggie">
+                    </picture>
+
+                </div>
+                <div class="profile-main">
+                    <h2 class="profile-name">The Notorious B.I.G.</h2>
+                    <P class="profile-position">Who Is The Notorious B.I.G.?</P>
+                    <p class="profile-body" style="margin-bottom: 10px;">
+                        <br>
+                        Christopher George Latore Wallace (May 21, 1972 – March 9, 1997), better known by his stage
+                        names
+                        the Notorious B.I.G.,
+                        Biggie Smalls, or simply Biggie,[1] was an American rapper and songwriter. Rooted in the New
+                        York
+                        rap scene and gangsta rap traditions,
+                        he is considered one of the greatest rappers of all time.[2] Wallace became known for his
+                        distinctive laidback lyrical delivery, offsetting the lyrics' often grim content.
+                        His music was often semi-autobiographical, telling of hardship and criminality, but also of
+                        debauchery and celebration.<br>
+                        And this is a snippet from one of his best singles so far called the 'Juicy'...
+                    </p>
+                    <audio controls controlsList="nodownload" class="profile-audio">
+                        <source
+                            src="/audios/juicyBiggie.mp3"
+                            type="audio/ogg">
+                        <source
+                            src="/audios/juicyBiggie.mp3"
+                            type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <%- include('./partials/footer.ejs')%>
+
+                <script>
+                    var navList = document.getElementById("nav-lists");
+                    function Show() {
+                        navList.classList.add("_Menus-show");
+                    }
+
+                    function Hide() {
+                        navList.classList.remove("_Menus-show");
+                    }
+
+                </script>
+
+    </body>
+
+    </html

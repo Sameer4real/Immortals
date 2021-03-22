@@ -1,0 +1,53 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/nav.ejs") %>
+            <nav>
+                <div class="site-title">
+                    <a href="/blogs">
+                        <h1 class="bookName">The Rhymes Fortress</h1>
+                    </a>
+                    <p>Rhymes and shit..... Not related poems</p>
+                </div>
+                <ul>
+                    <li><a href="/blogs/create" class="newblog">New Blog</a></li>
+                </ul>
+
+            </nav>
+
+            <div class="details content">
+                <h2>
+                    <%= blog.title %>
+                </h2>
+                <div class="content">
+                    <p>
+                        <%= blog.body %>
+                    </p>
+                </div>
+                <div class="author content">
+                    <h4>-<%= blog.author %>
+                    </h4>
+                </div>
+                <a class='delete' data-doc='<%=blog._id%>'>
+                    <i class="fas fa-trash" style="font-size: 25px;"></i>
+                </a>
+            </div>
+
+            <%- include("../partials/footer.ejs") %>
+                <script>
+                    const trashcan = document.querySelector('a.delete');
+                    trashcan.addEventListener('click', (e) => {
+                        const endpoint = `/blogs/${trashcan.dataset.doc}`;
+                        fetch(endpoint, {
+                            method: 'DELETE',
+                        })
+                            .then(response => response.json())
+                            .then(data => window.location.href = data.redirect)
+                            .catch(err => console.log(err));
+                    });
+
+                </script>
+    </body>
+
+</html>
